@@ -7,6 +7,7 @@ import android.os.Handler;
 import com.hanyu.healthtree.yabhealthtree.MainActivity;
 import com.hanyu.healthtree.yabhealthtree.R;
 import com.hanyu.healthtree.yabhealthtree.base.BaseActivity;
+import com.hanyu.healthtree.yabhealthtree.global.GlobalParam;
 
 /**
  * Created by xumingming on 2017/6/20.
@@ -29,7 +30,14 @@ public class SplashActivity extends BaseActivity {
     }
 
     private void start(){
-        intent = new Intent(SplashActivity.this, MainActivity.class);
+        intent = new Intent();
+        log(GlobalParam.getOpen()+"");
+        if(!GlobalParam.getOpen()){
+            //如果是第一次下载 打开
+            intent.setClass(SplashActivity.this, WelcomeActivity.class);
+        }else{
+            intent.setClass(SplashActivity.this, MainActivity.class);
+        }
         startActivity(intent);
         finish();
     }
