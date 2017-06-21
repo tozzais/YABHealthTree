@@ -13,4 +13,20 @@
         <attr name="matProg_linearProgress" format="boolean" />
     </declare-styleable>
 
+
+    <declare-styleable name="VerifyEditView">
+
+        <!--字体的大小-->
+        <attr name="VerifyCodeTextSize" format="dimension" />
+        <!--字体的颜色-->
+        <attr name="VerifyCodeTextColor" format="color" />
+        <!--字体的长度-->
+        <attr name="VerifyCodeLength" format="integer" />
+        <!--字体的背景-->
+        <attr name="VerifyCodeBackResoure" format="color" />
+        <!--字体之间的间隔-->
+        <attr name="VerifyCodeInterval" format="dimension" />
+
+    </declare-styleable>
+
 </resources>
